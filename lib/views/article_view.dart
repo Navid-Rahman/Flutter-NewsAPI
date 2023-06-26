@@ -13,10 +13,18 @@ class ArticleView extends StatefulWidget {
 }
 
 class _ArticleViewState extends State<ArticleView> {
+  //final Completer<WebViewController> _completer =
+  //Completer<WebViewController>();
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: WebView,
-    );
+    return Container();
   }
 }
+
+
+// WebView(
+//           initialUrl: widget.blogUrl,
+//           onWebViewCreated: ((WebViewController webViewController) {
+//             _completer.complete(webViewController);
+//           })),

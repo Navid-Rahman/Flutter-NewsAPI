@@ -23,7 +23,7 @@ class News {
           //print('Content: ${element['content']}');
 
           ArticleModel articleModel = ArticleModel(
-            author: element['author'],
+            author: element['author'] ?? 'Loading Error',
             title: element['title'],
             description: element['description'],
             url: element['url'],
