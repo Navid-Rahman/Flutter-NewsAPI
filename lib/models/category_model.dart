@@ -1,7 +1,9 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 class CategoryModel {
   String categoryName;
   String imageUrl;
 
-  CategoryModel({required this.categoryName, required this.imageUrl});
+  CategoryModel({
+    required this.categoryName,
+    required this.imageUrl,
+  });
 }

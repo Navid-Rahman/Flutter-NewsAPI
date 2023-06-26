@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_newsapi/utils/theme.dart';
 import 'package:flutter_newsapi/views/home.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primaryColor: Colors.white),
+      theme: myAppTheme(),
       title: 'News Today',
       home: Home(),
     );
