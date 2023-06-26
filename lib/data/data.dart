@@ -1,57 +1,56 @@
 import 'package:flutter_newsapi/models/category_model.dart';
 
 List<CategoryModel> getCategories() {
-  List<CategoryModel> category = [];
-  CategoryModel categoryModel = CategoryModel(categoryName: '', imageUrl: '');
+  List<CategoryModel> categories = [];
 
-  //1st Category
-  categoryModel.categoryName = 'Business';
-  categoryModel.imageUrl =
-      'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80';
+  CategoryModel categoryModel = CategoryModel(
+    categoryName: 'Business',
+    imageUrl:
+        'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80',
+  );
+  categories.add(categoryModel);
 
-  category.add(categoryModel);
+  categoryModel = CategoryModel(
+    categoryName: 'Entertainment',
+    imageUrl:
+        'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+  );
+  categories.add(categoryModel);
 
-  //2nd Category
+  categoryModel = CategoryModel(
+    categoryName: 'General',
+    imageUrl:
+        'https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+  );
+  categories.add(categoryModel);
 
-  categoryModel.categoryName = "Entertainment";
-  categoryModel.imageUrl =
-      "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80";
-  category.add(categoryModel);
+  categoryModel = CategoryModel(
+    categoryName: 'Health',
+    imageUrl:
+        'https://images.unsplash.com/photo-1445384763658-0400939829cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80',
+  );
+  categories.add(categoryModel);
 
-  //3
+  categoryModel = CategoryModel(
+    categoryName: 'Science',
+    imageUrl:
+        'https://images.unsplash.com/photo-1628595351029-c2bf17511435?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2232&q=80',
+  );
+  categories.add(categoryModel);
 
-  categoryModel.categoryName = "General";
-  categoryModel.imageUrl =
-      "https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60";
-  category.add(categoryModel);
+  categoryModel = CategoryModel(
+    categoryName: 'Sports',
+    imageUrl:
+        'https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2207&q=80',
+  );
+  categories.add(categoryModel);
 
-  //4
+  categoryModel = CategoryModel(
+    categoryName: 'Technology',
+    imageUrl:
+        'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80',
+  );
+  categories.add(categoryModel);
 
-  categoryModel.categoryName = "Health";
-  categoryModel.imageUrl =
-      "https://images.unsplash.com/photo-1494390248081-4e521a5940db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1595&q=80";
-  category.add(categoryModel);
-
-  //5
-
-  categoryModel.categoryName = "Science";
-  categoryModel.imageUrl =
-      "https://images.unsplash.com/photo-1554475901-4538ddfbccc2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80";
-  category.add(categoryModel);
-
-  //5
-
-  categoryModel.categoryName = "Sports";
-  categoryModel.imageUrl =
-      "https://images.unsplash.com/photo-1495563923587-bdc4282494d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80";
-  category.add(categoryModel);
-
-  //5
-
-  categoryModel.categoryName = "Technology";
-  categoryModel.imageUrl =
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80";
-  category.add(categoryModel);
-
-  return category;
+  return categories;
 }
