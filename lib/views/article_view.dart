@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 class ArticleView extends StatefulWidget {
-  const ArticleView({super.key});
+  final String blogUrl;
+  const ArticleView({
+    super.key,
+    required this.blogUrl,
+  });
 
   @override
   State<ArticleView> createState() => _ArticleViewState();
@@ -10,6 +15,8 @@ class ArticleView extends StatefulWidget {
 class _ArticleViewState extends State<ArticleView> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      child: WebView,
+    );
   }
 }

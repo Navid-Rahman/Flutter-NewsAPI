@@ -3,6 +3,7 @@ import 'package:flutter_newsapi/data/data.dart';
 import 'package:flutter_newsapi/data/news.dart';
 import 'package:flutter_newsapi/models/article_model.dart';
 import 'package:flutter_newsapi/models/category_model.dart';
+import 'package:flutter_newsapi/views/article_view.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -99,6 +100,7 @@ class _HomeState extends State<Home> {
                             imageUrl: articles[index].urlToImage,
                             title: articles[index].title,
                             description: articles[index].description,
+                            url: articles[index].url,
                           );
                         },
                       ),
@@ -160,45 +162,60 @@ class BlogTile extends StatelessWidget {
   final String imageUrl;
   final String title;
   final String description;
+  final String url;
 
-  const BlogTile(
-      {super.key,
-      required this.imageUrl,
-      required this.title,
-      required this.description});
+  const BlogTile({
+    super.key,
+    required this.imageUrl,
+    required this.title,
+    required this.description,
+    required this.url,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(bottom: 16),
-      child: Column(
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(6),
-            child: Image.network(imageUrl),
-          ),
-          SizedBox(
-            height: 8,
-          ),
-          Text(
-            title,
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w500,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ArticleView(
+              blogUrl: url,
             ),
           ),
-          SizedBox(
-            height: 8,
-          ),
-          Text(
-            description,
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w300,
-              color: Colors.black54,
+        );
+      },
+      child: Container(
+        margin: EdgeInsets.only(bottom: 16),
+        child: Column(
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(6),
+              child: Image.network(imageUrl),
             ),
-          ),
-        ],
+            SizedBox(
+              height: 8,
+            ),
+            Text(
+              title,
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            Text(
+              description,
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w300,
+                color: Colors.black54,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
